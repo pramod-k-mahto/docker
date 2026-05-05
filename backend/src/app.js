@@ -14,11 +14,16 @@ const PORT = process.env.PORT || 9000;
 // ✅ CORS FIRST (important)
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "http://72.61.237.41:3000"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    // credentials: true,
   })
 );
+
+
 
 // body parser
 app.use(express.json());
